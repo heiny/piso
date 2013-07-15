@@ -63,14 +63,6 @@
       <Name>ProcessExec</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="tools\EatCpu.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="tools\EatMemory.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>XCOPY /Y /I "$(SolutionDir)ProcessHost\bin\$(ConfigurationName)\*.*" "$(TargetDir)ProcessHost"</PostBuildEvent>

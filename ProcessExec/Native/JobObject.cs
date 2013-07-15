@@ -862,9 +862,6 @@ namespace ProcessExec.Native
         {
             if (jobCpuRateLimit > 0)
             {
-
-                System.Diagnostics.Debugger.Launch();
-
                 var cpuRateControlInfo = NativeMethods.JOBOBJECT_CPU_RATE_CONTROL_INFORMATION.RateLimited(jobCpuRateLimit);
 
                 int len = Marshal.SizeOf(typeof(NativeMethods.JOBOBJECT_CPU_RATE_CONTROL_INFORMATION));
@@ -887,8 +884,7 @@ namespace ProcessExec.Native
                 {
                     Marshal.FreeHGlobal(ptr);
                 }
-            }
-            
+            }            
         }
 
         /// <summary>

@@ -200,7 +200,7 @@ namespace ProcessExec.Native
             [FieldOffset(0)]
             public uint CpuRate;
 
-            [FieldOffset(4)]
+            [FieldOffset(0)]
             public uint Weight;
         }
 
